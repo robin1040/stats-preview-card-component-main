@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300&family=Zen+Old+Mincho:wght@400;700;900&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: hsl(233, 47%, 7%);
+}
+
+.wrap{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    width: 70%;
+    max-width: 980px;
+    min-width: 320px;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+    background: hsl(244, 38%, 16%);
+    border-radius: .7em;
+}
+
+@media screen  and (max-width:768px) {
+
+    .wrap {
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+
+     .wrap .card1{
+        height: 70%;
+        text-align: center;
+        padding: 1.8rem;
+    }
+    
+    .wrap .card2{
+        height: 30%;
+        border-radius: .7em .7em 0 0 ;
+    }
+}
+
+.card1{
+    flex-basis: 50%; /* tamaño inicial de un elemento flexible */
+    padding: 50px;
+    color: #fff;
+}
+
+.title{
+    font-size: 2.2rem;
+}
+
+@media screen and (max-width:768px){
+
+    .title{
+        font-size: 1.8rem;
+    }
+}
+
+
+.title span{
+    color:hsl(277, 64%, 61%) ;
+    font-weight: bold;
+}
+
+.content{
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 20px;
+}
+
+.lista{
+    display: flex;
+    text-align: justify;
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+
+    .lista{
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        padding: 70px;
+        flex-direction: column;
+        line-height: 30px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+}
+
+.lista span{
+    color: hsl(0, 0%, 100%, 0.6);
+    font-size: 0.7em;
+}
+
+.lista h3{
+    margin-left: 10px;
+}
+
+.card2{
+    flex-basis: 50%;
+    background-image: linear-gradient(
+      rgba(108, 32, 138, 0.7),
+      rgba(151, 55, 143, 0.7)
+    ),url("../images/image-header-desktop.jpg");
+    background-position: center;
+    background-size: cover; /* para que la imagen que adapte al tamaño de la caja */
+    border-radius: 0 .7em 1em 0;
+    /* height: 100%; */
+}
+
+.attribution{
+    text-align: center;
+    margin-top: 40px;
+}
